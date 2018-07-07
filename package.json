@@ -1,0 +1,24 @@
+{
+  "name": "lottery-contract-ethereum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pashkoostap/lottery-contract-ethereum.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pashkoostap/lottery-contract-ethereum/issues"
+  },
+  "homepage": "https://github.com/pashkoostap/lottery-contract-ethereum#readme",
+  "dependencies": {
+    "solc": "^0.4.24",
+    "truffle-hdwallet-provider": "0.0.5",
+    "web3": "^1.0.0-beta.34"
+  }
+}
