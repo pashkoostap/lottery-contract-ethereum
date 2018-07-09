@@ -8,7 +8,7 @@ const {
   MNEMONIC_PHRASE
 } = require('./config');
 
-const provider = new HDWalletProvider(MNEMONIC_PHRASE, LOCAL_PROVIDER_URL);
+const provider = new HDWalletProvider(MNEMONIC_PHRASE, RINKEBY_PROVIDER_URL);
 
 const _web3 = new Web3(provider);
 

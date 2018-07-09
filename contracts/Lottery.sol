@@ -9,7 +9,7 @@ contract Lottery {
     }
 
     function enter() public payable {
-        require(msg.value > 1 ether);
+        require(msg.value > 0.1 ether);
 
         players.push(msg.sender);
     }
@@ -22,11 +22,15 @@ contract Lottery {
         return uint(keccak256(block.difficulty, now, players));
     }
 
-    function pickWinner() public {
-        require(msg.sender == manager);
+    function pickWinner() public restricted {
         uint index = random() % players.length;
 
         players[index].transfer(this.balance);
         players = new address[](0);
+    }
+
+    modifier restricted() {
+        require(msg.sender == manager);
+        _;
     }
 }
